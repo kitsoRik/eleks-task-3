@@ -1,0 +1,49 @@
+.catalog {
+     width: 700px;
+
+     margin: 0 auto;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.catalog-container {
+     display: flex;
+     flex-direction: column;
+
+     width: 100%;
+}
+
+.catalog-container-headers {
+     display: flex;
+     flex-direction: row;
+     
+
+     width: 100%;
+}
+
+.catalog-container-header {
+     font-size: 18pt;
+     flex: 1;
+     text-align: center;
+
+     cursor: pointer;
+}
+
+.catalog-container-header:hover {
+     text-decoration: underline;
+}
+
+.catalog-container-header:not(:last-child) {
+     border-right: 2px solid black;
+}
+
+.catalog-container-header-name {
+     flex: 2;
+}
+
+.catalog-container-header-sort-arrow {
+    display: inline-block;
+}
