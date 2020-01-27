@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Catalog from '../catalog'
 import SingerPage from '../singer-page'
 
+import { ApiProvider } from '../../services/apiContext/'
+
 export default class App extends Component {
 
      state = {
@@ -32,11 +34,13 @@ export default class App extends Component {
 
           return (
                <div>
-                    <Router>
-                         <Route path="/" render={() => <Link to="/catalog">Catalog</Link>} exact/>
-                         <Route path="/catalog" component={catalog} exact />
-                         <Route path="/catalog/:id" component={element} exact />
-                    </Router>
+                    <ApiProvider value={{lang: "UA"}}>
+                         <Router>
+                              <Route path="/" render={() => <Link to="/catalog">Catalog</Link>} exact/>
+                              <Route path="/catalog/" component={catalog} exact />
+                              <Route path="/catalog/:id" component={element} exact />
+                         </Router>
+                    </ApiProvider>
                </div>
           );
      }

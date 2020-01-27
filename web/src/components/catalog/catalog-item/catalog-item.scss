@@ -3,6 +3,7 @@ $border: 2px solid black;
 .catalog-item {
      background: white;
      color: black;
+     padding: 0;
 
      border-left: 2px solid black;
      border-right: 2px solid black;
@@ -12,6 +13,11 @@ $border: 2px solid black;
      text-decoration: none;
 
      display: flex;
+     flex-direction: row;
+     align-items: stretch;
+     overflow: hidden;
+
+     cursor: pointer;
 }
 
 .catalog-item:first-child {
@@ -29,26 +35,18 @@ $border: 2px solid black;
 }
 
 .catalog-item * {
+     text-decoration: none;
      margin: 5px 10px;
 }
 
 .catalog-item-index {
      width: 55px;
      text-align: center;
-     border-right: 2px solid black;
 }
 
 .catalog-item-info {
      flex: 1;
      text-align: center;
-}
-
-.catalog-item-info:not(:last-child) {
-     border-right: 2px solid black;
-}
-
-.catalog-item-info:hover:not(:last-child) {
-     border-right: 2px solid white;
 }
 
 .catalog-item-name {
@@ -57,4 +55,14 @@ $border: 2px solid black;
 
 .catalog-item-name * {
      margin: 0;
+}
+
+.catalog-item-info-splitter {
+     margin: 0 0;
+     width: 2px;
+     background: black;
+}
+
+.catalog-item:hover .catalog-item-info-splitter {
+     background: white;
 }

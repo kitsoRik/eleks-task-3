@@ -1,4 +1,4 @@
-export const host = "http://5.45.118.116:11003";
+export const host = "http://localhost:11003";
 
 export async function getAllSingers(params) {
      const res = await _sendWithParams(`${host}/singers`, params);
